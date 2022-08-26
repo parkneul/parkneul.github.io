@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>박늘 포트폴리오</title>
+    <link rel="shortcut icon" href="./favicon/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <!--<link rel="stylesheet" type="text/css" href="./css/examples.css" />-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/modernizr.custom.min.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-ui-1.12.0.custom.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="js/mixFilter.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var wd = parseInt($(window).width());
+            if(wd>=770){
+                $('#fullpage').fullpage({
+                sectionsColor: ['#fff', '#eae6e7', '#fff', '#fff','#eae6e7'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+                menu: '#menu',
+                afterLoad: function(anchorLink, index) {
+                    //section 2
+                    if (index == 2) {
+                        //moving the image
+                        $('#section1').find('.occupy').delay(100).animate({
+                            left: '0%'
+                        }, 1000, 'easeOutExpo');
+
+                    }
+                    //section 3
+                    if (anchorLink == '3rdPage') {
+                        //moving the image
+                        $('#section2').find('.intro').delay(0).animate({
+                            left: '0%'
+                        }, 500, 'easeOutExpo');
+                    }
+                }
+            });
+            } 
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="menubox">
+        <ul id="menu">
+            <li data-menuanchor="firstPage"><a href="#firstPage" onfocus="this.blur();">INTRO</a>
+            <li data-menuanchor="secondPage"><a href="#secondPage" onfocus="this.blur();">PROFILE</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage" onfocus="this.blur();">PORTFOLIO</a></li>
+            <li data-menuanchor="4thPage"><a href="#4thPage" onfocus="this.blur();">CONTACT</a></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <h1>Portfolio</h1>
+            <p>NEUL's PORTFOLIO</p>
+            <div id="scroll">
+                <img src="img/scrolldown.gif" width="30" height="auto">
+                <h6>scroll down</h6>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div id="profile">
+                <div class="prof1">
+                    <ul>
+                        <h2>Profile</h2>
+                        <h3>박늘 (Park Neul)</h3>
+                        <li class="icon"><img src="img/birthday.png" alt="">1993.12.30.</li>
+                        <li class="icon"><img src="img/mobile.png" alt="">010.2556.9706</li>
+                        <li class="icon"><img src="img/mail.png" alt="">rnrsoehdlq@naver.com</li>
+                        <li class="icon"><img src="img/college.png" alt="">그린컴퓨터아트학원 수료 </li>
+                    </ul>
+                    <li class="profile_img"><img src="img/IMG.jpg" alt="프로필사진"></li>
+                </div>
+                <div class="prof2">
+                    <div class="list1">
+
+                        <p><span class="title">자 격 증</span><span class="content">GTQ1급, 컴퓨터활용능력1급 (필기), 운전면허증 1종보통</span></p>
+
+                        <p><span class="title">교육사항</span><span class="content">2022.04~2022.08 [과정평가형] 웹디자인기능사(웹퍼블리셔,프론트앤드)취득과정 [그린컴퓨터아트학원 수료]</span></p>
+
+                    </div>
+                    <div class="list23">
+                        <div class="list2">
+                            <h4 class="title">Software Skills</h4>
+                            <div class="skill">
+                                <div id="ai">
+                                    <p>Illustrator</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>70%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ps">
+                                    <p>Photoshop</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>95%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ht">
+                                    <p>HTML/CSS</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>85%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ja">
+                                    <p>Javascript</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>60%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="jq">
+                                    <p>JQuery</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>60%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="ms">
+                                    <p>MS Office</p>
+                                    <div class="bar">
+                                        <div class="fullbar">
+                                            <div class="occupy"><span>90%</span></div>
+                                        </div>
+                                    </div>
+                                </div> <!--  ms   -->
+
+                            </div> <!-- skill  -->
+                        </div> <!-- list2 -->
+                        <div class="list3">
+                            <div class="hobby">
+                                <h4 class="title">Hobby</h4>
+                                <ul>
+                                    <li><img src="./img/airplane.png" alt="여행">여행</li>
+                                    <li><img src="./img/write.png" alt="글쓰기">글쓰기</li>
+                                    <li><img src="./img/movie.png" alt="영화">영화관람</li>
+                                    <li> <img src="./img/camera.png" alt="사진">사진찍기</li>
+                                    <li><img src="./img/book.png" alt="책">독서</li>
+                                </ul>
+                            </div>
+                            <div class="pers">
+                                <h4 class="title2">Personality</h4>
+                                <div id="per1">
+                                    <p class="left">외향적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">내향적</p>
+                                </div>
+                                <div id="per2">
+                                    <p class="left">이성적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">감성적</p>
+                                </div>
+                                <div id="per3">
+                                    <p class="left">능동적</p>
+                                    <div class="bar2">
+                                        <div class="fullbar2">
+                                            <div class="occupy2"></div>
+                                        </div>
+                                    </div>
+                                    <p class="right">수동적</p>
+                                </div> <!--  per3  -->
+
+                            </div> <!-- list3 -->
+                        </div> <!--  list23 -->
+
+                    </div> <!-- prof2  -->
+
+                </div> <!--  profile  -->
+            </div> <!--  section1  -->
+
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <div class="art">
+                    <h2>PORTFOLIO</h2>
+                    <div class="filterWrap">
+                        <button class="filter" data-filter="all">All</button>
+                        <button class="filter" data-filter=".web">WEB</button>
+                        <button class="filter" data-filter=".responsive">RESPONSIVE</button>
+                        <button class="filter" data-filter=".mobile">MOBILE</button>
+                    </div>
+                </div>
+                <div class="sec2">
+                <div class="container" id="mixItUp">
+                    <div class="mix web responsive mobile" id="d1" data-myorder="1">
+                        <img src="img/sulwhasoo.jpg" alt="설화수" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 설화수(화장품 브랜드)</h3>
+                            <p class="discription">베이직하고 깔끔하게 디자인</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/HTML/CSS/JQuery</p>
+                            <a href="https://parkneul.github.io/sulwhasoo/index.html#" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web responsive mobile" id="d2" data-myorder="2">
+                        <img src="img/mmca.jpg" alt="mmca" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 국립현대미술관(공기업)</h3>
+                            <p class="discription">공공기관으로의 깔끔만 디자인</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/HTML/CSS/JQuery</p>
+                            <a href="https://parkneul.github.io/mmca/" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web" id="d3" data-myorder="3">
+                        <img src="img/sweetbalnce.jpg" alt="스윗밸런스" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 스윗밸런스(기업)</h3>
+                            <p class="discription">샐러드 상품을 강조하는 디자인 </p>
+                            <p class="size">web site(1920X1080)</p>
+                            <p class="program">Photoshop/HTML/CSS/JQuery</p>
+                            <a href="https://parkneul.github.io/sweetbalance/" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web responsive mobile" id="d4" data-myorder="4">
+                        <img src="img/ooozoo.jpg" alt="ooozoo" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit"> 별빛정원우주(테마파크)</h3>
+                            <p class="discription">내부모습을 볼 수 있도록 사진을 배치한 디자인</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/HTML/CSS/JQuery</p>
+                            <a href="https://parkneul.github.io/ooozoo/" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web responsive mobile" id="d5" data-myorder="5">
+                        <img src="img/vive.jpg" alt="vivestudios" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">vivestudios(기업)</h3>
+                            <p class="discription">콘텐트 전문 스튜디오로 이미지 강조하는 디자인</p>
+                            <p class="size">Responsive Web</p>
+                            <p class="program">Photoshop/Illustrator/HTML/CSS/JQuery</p>
+                            <a href="https://parkneul.github.io/vivestudios/" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mix web mobile" id="d6" data-myorder="6">
+                        <img src="img/lottecar.jpg" alt="lottecar" class="d_img">
+                        <div class="po_title">
+                            <h3 class="sum_tit">롯데렌터카(기업)</h3>
+                            <p class="discription">결제과정을 편리하게 만든 디자인</p>
+                            <p class="size">Mobile design</p>
+                            <p class="program">Photoshop/figma</p>
+                            <a href="https://www.figma.com/file/QCVcg2ZfdnaLMe7gHd88gC/%EC%8B%9C%EC%95%88-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=0%3A1" target="new" class="ov_img"><img src="./img/link.png" alt="링크">
+                            </a>
+                        </div>
+                        </div>
+                </div>
+                </div>
+                </div>
+        </div>
+        <div class="section" id="section3">
+        <div class="contact fixed">
+            <h2 class="title">
+            <span>contact me</span>
+            </h2>
+        <div class="form">
+            <form method="post" action="#">
+            <fieldset>
+            <legend class="hide">연락</legend>
+                <div class="left">
+            <input type="text" placeholder="NAME">
+            <input type="tel" placeholder="PHONE">
+            <input type="email" placeholder="EMAIL">
+            </div>
+                <div class="right">
+            <textarea placeholder="MESSAGE"></textarea>
+            <button>send message</button>
+                </div>
+            </fieldset>
+            </form>
+            </div>
+            </div>
+            <div id="footer">
+                <p>COPYRIGHT &copy; 2022 PARKNEUL ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>
