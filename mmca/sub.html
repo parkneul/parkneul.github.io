@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국립현대미술관</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/sub.css">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/lnb.js"></script>
+  
+  <link rel="icon" href="./images/favicon/favicon-16x16.png">
+  <link rel="icon" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" href="./images/favicon/favicon-96x96.png">
+  <link rel="icon" href="./images/favicon/android-icon-36x36.png">
+  <link rel="icon" href="./images/favicon/android-icon-48x48.png">
+  <link rel="icon" href="./images/favicon/android-icon-72x72.png">
+  <link rel="icon" href="./images/favicon/android-icon-96x96.png">
+  <link rel="icon" href="./images/favicon/android-icon-144x144.png">
+  <link rel="icon" href="./images/favicon/android-icon-192x192.png">
+  <link rel="icon" href="./images/favicon/apple-icon-57x57.png">
+  <link rel="icon" href="./images/favicon/apple-icon-60x60.png">
+  <link rel="icon" href="./images/favicon/apple-icon-72x72.png">
+  <link rel="icon" href="./images/favicon/apple-icon-114x114.png">
+  <link rel="icon" href="./images/favicon/apple-icon-144x144.png">
+  <link rel="icon" href="./images/favicon/apple-icon-180x180.png">
+  <script>
+    //Menu
+    $(document).ready(function(){
+      $('.inner').hide();
+      $('nav > ul > li').hover(function(){$('.inner',this).stop().fadeIn();
+      },function(){
+        $('.inner',this).stop().fadeOut();
+      });
+    });
+  </script>
+
+<script>
+  //Up버튼
+  $(document).ready(function(){
+    var btt=document.querySelector('#back_to_top'),
+    docElem=document.documentElement,scrollAmount;
+
+    window.addEventListener('scroll',function(){
+      scrollAmount=this.pageYOffset; 
+      console.log(scrollAmount);
+      if(scrollAmount>1000){
+        ;
+        btt.className='visible';
+      }else{
+        btt.classList.remove('.visible');
+      }
+    });
+
+    btt.addEventListener('click',function(e){
+      e.preventDefault(
+        
+      );
+      var scrollInterval=setInterval(function(){
+        if(scrollAmount !=0){
+          window.scrollBy(0,-55)
+        }else{
+          clearInterval(scrollInterval)
+        }
+      },10);
+    });
+  });
+</script>
+<script>
+//언어에 대한 선택메뉴 모션
+$(".this_lang").click(function(){
+    if(ck2) {
+      $(".lang_list").addClass("on"); 
+      $(".lang").addClass("on"); 
+      $(this).addClass("on");    
+    } else {
+      $(".lang_list").removeClass("on"); 
+      $(".lang").removeClass("on"); 
+      $(this).removeClass("on");    
+    }
+    ck2 = !ck2;
+}); 
+</script>
+<script>
+  //toggle
+  $(document).ready(function(){
+    $('.toggle').click(function(){
+      $('.toggle').toggleClass('active');
+      //addClass()+removeClass()=toggleClass()
+    });
+  });
+</script>
+<script>
+  /*".lst_btn"은 어디에??  */
+$(document).ready(function(){
+    var ck1 = true, ck2 = true;  
+    //펼침 메뉴의 열기/닫기 모션
+  $(".lst_btn").click(function(){
+        if(ck1){
+            $(".collap").addClass("on");
+            $(".toggle").addClass("on");
+        } else {
+            $(".collap").removeClass("on");
+            $(".toggle").removeClass("on");
+        }
+        ck1 = !ck1;
+  }); 
+   //펼침 메뉴의 서브메뉴 열기
+  $(".collap li").click(function(){
+      $(".collap li").removeClass("on");
+      $(this).addClass("on");
+  }); 
+});
+</script>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="./images/logo.png" alt="로고">
+    </a>
+  </div>
+  <div class="header_wrap">
+    <div class="min_nav fixed">
+      <ul>
+        <li><a href="#">예약하기</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    
+    <div class="lang">
+      <button class="this_lang">한국어</button>
+      <ul class="lang_list">
+          <li class="item1"><a href="index_en.html">English</a></li>
+          <li class="item2"><a href="index_jp.html">Japan</a></li>
+      </ul>
+  </div>
+  <!-- 메뉴 -->
+  <nav class="collap">
+    <ul class="outer clear">
+      <li>
+        <a href="#" class="dep1">관람</a>
+        <ul class="inner">
+          <li><a href="#">서울</a></li>
+          <li><a href="#">과천</a></li>
+          <li><a href="#">덕수궁</a></li>
+          <li><a href="#">청주</a></li>
+          <li><a href="#">어린이미술관</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">통합예약</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">참여</a>
+        <ul class="inner">toggle
+          <li><a href="#">전시해설</a></li>
+          <li><a href="#">레지던시</a></li>
+          <li><a href="#">미술은행</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">전시</a>
+        <ul class="inner">
+          <li><a href="#">현재전시</a></li>
+          <li><a href="#">예정전시</a></li>
+          <li><a href="#">과거전시</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">교육</a>
+        <ul class="inner">
+          <li><a href="#">미술관교육소개</a></li>
+          <li><a href="#">어린이</a></li>
+          <li><a href="#">청소년</a></li>
+          <li><a href="#">교사</a></li>
+          <li><a href="#">성인</a></li>
+          <li><a href="#">교육자료실</a></li>
+          <li><a href="#">참여신청</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">소장품</a>
+        <ul class="inner">
+          <li><a href="#">소장품 검색</a></li>
+          <li><a href="#">소장품 탐색</a></li>
+          <li><a href="#">보존과학</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">미술연구</a>
+        <ul class="inner">
+          <li><a href="#">도서와 아카이브</a></li>
+          <li><a href="#">연구</a></li>
+          <li><a href="#">발간자료</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="dep1">디지털미술관</a>
+        <ul class="inner">
+          <li><a href="#">메인</a></li>
+          <li><a href="#">맞춤검색</a></li>
+          <li><a href="#">오디오가이드</a></li>
+          <li><a href="#">이용자갤러리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="toggle">
+    <div>
+      
+    </div>
+  
+  </div>
+</header>
+
+
+<!-- 서브페이지 -->
+  <div class="sub">
+  <h2>감각의 공간, 워치 앤 칠 2.0</h2>
+  <div class="wholeSub">
+  <div class="exp">
+    <img src="./images/poster3.png" alt="sub1">
+    <strong>기간</srong>
+    <span>2022-06-10 ~ 2022-09-12</span><br>
+    <strong>주최/후원</strong>
+    <span>국립현대미술관/ (협력) ArkDes, Sharjah Art Foundation/(후원) 테라로사</span><Br>
+    <strong>장소</strong>
+    <span>서울 지하1층, 6전시실, 온라인 플랫폼</span><br>
+    <strong>관람료</strong>
+    <span>서울관통합권 4,000원</span><br>
+    <strong>작가</strong>
+    <span>김실비, 김아영, 염지혜, 김웅현, 안정주&전소정, 바래, 안드레아스 바너슈테트, 제나 수텔라, 왕 & 쇠데르스트룀, 바스마 알 샤리프, 샤리프 와키드, 유리 패티슨, 시몬 C. 니키유, ASMR티카, 알리 체리, 마하 마아문, 아마드 고세인</span><br>
+    <strong>작품수</strong>
+    <span>20여점</span>
+  </div>
+  <div class="info">
+    <div class="info1">
+    <img src="./images/sub/0001 (1).jpg" alt="sub2">
+    <img src="./images/sub/0001 (3).jpg" alt="sub4">
+    </div>
+    <div class="txtinfo">
+    <p>미술을 공유하는 동시대적 방식을 탐색하는 ‘워치 앤 칠(https://watchandchill.kr)'은 MMCA가 구축한 온라인 스트리밍 서비스를 중심으로 한 국제 협력 프로젝트이다. 다자간 교류를 통해 미술한류를 시도하는 ‘워치 앤 칠'은 3개년 사업으로 계획되었으며, 2021년 아시아 지역 미술관 협력에 이어 올해는 유럽과 중동의 주요 미술관과 협력을 확장한다.</p>
+  </div>
+</div>
+    <div class="group">
+    <img src="./images/sub/0001 (2).jpg" alt="sub3">
+    <div class="txtinfo">
+      <p>국립현대미술관과 아랍에미리트의 샤르자미술재단(SAF), 스웨덴 국립건축·디자인센터 아크데스(ArkDes)의 미디어 소장품 및 지역 작가들의 작품을 온라인 플랫폼에 공유해 관람객이 스트리밍 구독을 통해 작품을 감상할 수 있게 한다. </p>
+    </div>
+      <img src="./images/sub/0001 (4).jpg" alt="sub4">
+      <div class="txtinfo">
+        <p>또한 서울에서 개최되는 오프라인 쇼케이스 전시를 시작으로, 협력 미술관에서도 물리적으로 작품을 감상할 수 있도록 국제 순회전이 개최될 예정이다. ‘워치 앤 칠’ 시즌 2의 주제는 “감각의 공간”으로 디지털로 번안된 동시대적 감각 체계를 고찰하고자 한다. 보는 촉각, 조정된 투영, 트랜스 x 움직임, 내 영혼의 비트 등의 내용으로 진행되는 이번 전시는 스크린 너머 공감각적 유대를 확장하는 미디어 작가들의 작품을 통해 기술 이면의 다층적 인간성을 사유한다.</p>
+      </div>
+    </div>
+        <div class="imgWrap">
+          <span>전시이미지</span>
+          <a href="#"><img src="./images/sub/0001 (5).jpg" alt="image1"></a>
+          <a href="#"><img src="./images/sub/0001 (6).jpg" alt="image2"></a>
+          <a href="#"><img src="./images/sub/0001.jpg" alt="image3"></a>
+          <a href="#"><img src="./images/sub/dse_2022050211205616612072.png" alt="image4"></a>
+          <a href="#"><img src="./images/sub/dse_2022050211221176618941.jpg" alt="image5"></a>
+          <a href="#"><img src="./images/sub/dse_2022050211230353012315.jpg" alt="image6"></a>
+          <a href="#"><img src="./images/sub/dse_2022050211234470615604.jpg" alt="image7"></a>
+          <a href="#"><img src="./images/sub/dse_2022071911222359713525.jpg" alt="image8"></a>
+        </div>
+</div>
+  </div>
+</div>
+
+<!-- 푸터 -->
+<footer>
+  <div class="site_map_wrap" id="col_menu">
+      <div class="site_map">
+          <ul>
+              <li>
+                  <strong>미술관</strong>
+                  <ul class="site_map_inner">
+                      <li>
+                          <a href="#">미술관소개</a>
+                      </li>
+                      <li>
+                          <a href="#">채용</a>
+                      </li>
+                      <li>
+                        <a href="#">후원</a>
+                    </li>
+                    <li><a href="#">MMCA프렌즈</a></li>
+                    <li><a href="#">시설대관·복제신청</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">국립현대미술관 문화재단</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <strong>고객지원</strong>
+                  <ul class="site_map_inner">
+                      <li>
+                          <a href="#">이용약관</a>
+                      </li>
+                      <li>
+                          <a href="#">개인정보처리방침</a>
+                      </li>
+                      <li>
+                          <a href="#">저작권정책</a>
+                      </li>
+                      <li><a href="#">국민신문고</a></li>
+                      <li><a href="#">정보공개</a></li>
+                      <li><a href="#">불편부조리신고</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <strong>상담/예약</strong>
+                  <ul class="site_map_inner">
+                      <li>
+                          <a href="#">상담/예약신청</a>
+                      </li>
+                      <li>
+                          <a href="#">나의 예약현황</a>
+                      </li>
+                      <li>
+                          <a href="#">제휴문의</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <strong>서비스</strong>
+                  <ul class="site_map_inner">
+                      <li>
+                          <a href="#">MMCA 뉴스레터 구독</a>
+                      </li>
+                      <li>
+                          <a href="#">소식지</a>
+                      </li>
+                      <li>
+                          <a href="#">멤버십</a>
+                      </li>
+                      <li>
+                          <a href="#">온라인숍</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <strong>SNS</strong>
+                <ul class="site_map_inner">
+                    <li>
+                        <a href="#">인스타그램</a>
+                    </li>
+                    <li>
+                        <a href="#">유튜브</a>
+                    </li>
+                    <li>
+                        <a href="#">페이스북</a>
+                    </li>
+                    <li>
+                        <a href="#">트위터</a>
+                    </li>
+                    <li>
+                      <a href="#">네이버</a>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer">
+      <div class="footer_logo">
+          <img src="" alt="">
+      </div>
+      <address>
+          <p>
+              대표자 : 윤범모 <i></i>사업자등록번호 : 138-83-00313<br>
+              대표전화 : (서울)<a href="tel:02-3701-9500">02-3701-9500</a> (과천)<a href="tel:02-2188-6000">02-2188-6000</a>
+              (덕수궁)<a href="tel:02-2022-0600">02-2022-0600</a>
+              (청주)<a href="tel:043-261-1400">043-261-1400</a>
+          </p>
+          <p>
+            &copy; 2021 National Museum of Modern and Contemporary Art, Korea
+          </p>
+      </address>
+  </div>
+  <a href="#" id="back_to_top"><img src="./images/icon/up_arrow_icon.png" alt="위로"></a>
+</footer>
+<!-- 모바일 사이드메뉴 -->
+<div id="lnb">
+  <ul class="outer clear">
+    <li>
+      <a href="#" class="dep1">관람</a>
+      <ul>
+        <li><a href="#">서울</a></li>
+        <li><a href="#">과천</a></li>
+        <li><a href="#">덕수궁</a></li>
+        <li><a href="#">청주</a></li>
+        <li><a href="#">어린이미술관</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">통합예약</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">참여</a>
+      <ul>
+        <li><a href="#">전시해설</a></li>
+        <li><a href="#">레지던시</a></li>
+        <li><a href="#">미술은행</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">전시</a>
+      <ul>
+        <li><a href="#">현재전시</a></li>
+        <li><a href="#">예정전시</a></li>
+        <li><a href="#">과거전시</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">교육</a>
+      <ul>
+        <li><a href="#">미술관교육소개</a></li>
+        <li><a href="#">어린이</a></li>
+        <li><a href="#">청소년</a></li>
+        <li><a href="#">교사</a></li>
+        <li><a href="#">성인</a></li>
+        <li><a href="#">교육자료실</a></li>
+        <li><a href="#">참여신청</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">소장품</a>
+      <ul>
+        <li><a href="#">소장품 검색</a></li>
+        <li><a href="#">소장품 탐색</a></li>
+        <li><a href="#">보존과학</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">미술연구</a>
+      <ul>
+        <li><a href="#">도서와 아카이브</a></li>
+        <li><a href="#">연구</a></li>
+        <li><a href="#">발간자료</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dep1">디지털미술관</a>
+      <ul>
+        <li><a href="#">메인</a></li>
+        <li><a href="#">맞춤검색</a></li>
+        <li><a href="#">오디오가이드</a></li>
+        <li><a href="#">이용자갤러리</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
