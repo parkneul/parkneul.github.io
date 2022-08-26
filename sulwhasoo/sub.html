@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sulwahsoo | 설화수 한국</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/sub.css">
+  <link rel="icon" href="./images/favicon/android-icon-72x72.png">
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.inner2').hide(); 
+        $('.side_wrap .on .inner2').show();
+        
+        $('.inner2 a').click(function(){
+            $('.inner2 a').removeClass('on');
+            $(this).addClass('on');
+        });
+
+    $('.side_wrap > ul > li').click(function(){
+        $(this).addClass('on');
+    
+    var inner2=$('.inner2',this);
+    if(inner2.css('display')=='none'){$('.inner2').slideUp();
+    $('.inner2',this).slideDown();
+}
+    });
+    });
+    </script>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="로고">
+        </a>
+      </h1>
+  <input type="checkbox" class="none" id="ck">
+  <div class="toggle">
+    <label for="ck" class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      menu</label>
+  </div>
+  <div class="side">
+    <div class="side_wrap">
+      <ul class="outer clear">
+        <li>
+          <a href="#">브랜드빌리프</a>
+          <ul class="inner2">
+            <li><a href="#">브랜드빌리프</a></li>
+            <li><a href="#">브랜드캠페인</a></li>
+            <li><a href="#">뷰티 프롬 컬처</a></li>
+          </ul>
+        </li>
+    
+      <li>
+        <a href="#">설화수포스트</a>
+        <ul class="inner2">
+        <li><a href="#">설화수포스트</a></li>
+        <li><a href="#">명작컬렉션</a></li>
+        <li><a href="#">설화수스타일</a></li>
+        <li><a href="#">설화문화전</a></li>
+        <li><a href="#">설화매거진</a></li>
+        </ul>
+      </li>
+    
+      <li>
+        <a href="#">제품</a>
+        <ul class="inner2">
+        <li><a href="#">스킨케어</a></li>
+        <li><a href="#">메이크업</a></li>
+        <li><a href="#">남성</a></li>
+        <li><a href="#">진설</a></li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="#">베스트셀러</a>
+        <ul class="inner2">
+        <li><a href="#">여성용</a></li>
+        <li><a href="#">남성용</a></li>
+        </ul>
+        </li>
+      <li>
+        <a href="#">스파</a>
+        <ul class="inner2">
+        <li><a href="#">소개</a></li>
+        <li><a href="#">스파 프로그램</a></li>
+        <li><a href="#">예약</a></li>
+        <li><a href="#">매장찾기</a></li>
+      </ul>
+      </li>
+  
+      <li>
+        <a href="#">플래그십스토어</a>
+        <ul class="inner2">
+        <li><a href="#">설화수 북촌</a></li>
+        <li><a href="#">설화수 도산</a></li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="bottom">
+    <nav>
+      <ul class="outer clear">
+        <li>
+          <a href="#">브랜드빌리프</a>
+          <ul class="inner">
+            <li><a href="#">브랜드빌리프</a></li>
+            <li><a href="#">브랜드캠페인</a></li>
+            <li><a href="#">뷰티 프롬 컬처</a></li>
+          </ul>
+        </li>
+    
+      <li>
+        <a href="#">설화수포스트</a>
+        <ul class="inner">
+        <li><a href="#">설화수포스트</a></li>
+        <li><a href="#">명작컬렉션</a></li>
+        <li><a href="#">설화수스타일</a></li>
+        <li><a href="#">설화문화전</a></li>
+        <li><a href="#">설화매거진</a></li>
+        </ul>
+      </li>
+    
+      <li>
+        <a href="#">제품</a>
+        <ul class="inner">
+        <li><a href="#">스킨케어</a></li>
+        <li><a href="#">메이크업</a></li>
+        <li><a href="#">남성</a></li>
+        <li><a href="#">진설</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">베스트셀러</a>
+        <ul class="inner">
+        <li><a href="#">여성용</a></li>
+        <li><a href="#">남성용</a></li>
+        </ul>
+        </li>
+      <li>
+        <a href="#">스파</a>
+        <ul class="inner">
+        <li><a href="#">소개</a></li>
+        <li><a href="#">스파 프로그램</a></li>
+        <li><a href="#">예약</a></li>
+        <li><a href="#">매장찾기</a></li>
+      </ul>
+      </li>
+
+      <li>
+        <a href="#">플래그십스토어</a>
+        <ul class="inner">
+        <li><a href="#">설화수 북촌</a></li>
+        <li><a href="#">설화수 도산</a></li>
+      </ul>
+      </li>
+    </ul>
+    </nav>
+  </div>
+  </div>
+  </header>
+
+
+<!-- 서브 상세페이지 -->
+<div class="page1">
+<div class="texture">
+  <img src="./images/finalUV.jpg" alt="선크림">
+</div>
+<!-- <div class="hover">
+  <img src="./images/210520_final_KR_snowisebrighteninguvprotector_creamyglow_PDP_4.jpg" alt="질감">
+</div> -->
+
+  <div class="textBox">
+    <h2 class="title">상백선크림</h2>
+  <strong>UV Wise Brightening Multi Protector</strong>
+  <p>#NO.1선크림 #유해환경방어막</p>
+  <span>자외선, 유해환경 자극으로부터 피부를 강력하게 방어함과 동시에 편하게 지켜주는 저자극 브라이트닝 선크림</span>
+  <strong>89,000원</strong>
+  <a href="#" class="reserve">구매하기<i></i></a>
+  </div>
+</div>
+
+  <div class="bar">
+    <ul>
+      <li>
+        <a href="#">
+        <span>상품 특징</span>
+      </a>
+      <a href="#">
+        <span>사용 리뷰</span>
+      </a>
+      <a href="#">
+        <span>전성분/주의사항</span>
+      </a>
+    </li>
+    </ul>
+
+  </div>
+
+  <div class="page2">
+    <div class="uvwise">
+    <img src="./images/210520_final_KR_snowisebrighteninguvprotector_creamyglow_PDP_6.jpg" alt="서브1">
+  </div>
+    <h1 class="h1">초미세먼지 시대에 대응하는 설화수만의 선케어</h1>
+    <img src="./images/sub_page.jpg" alt="서브2">
+    <h1 class="h1">고객님의 소중한 리뷰</h1>
+    <p class="p1">얼굴에 무거운 느낌과 끈적임이 없어 좋습니다. 도자기 피부톤을 연출해줘서 얼굴에 있는 옅은 잡티가 깨끗하게 정돈이 됩니다. -quee****님</p>
+    <p>&emsp;</p>
+    <p class="p2">
+    제가 사용 후 친한 언니 선물로 줬어요. 만날때마다 제 피부 좋아보인다고 비결 알려달라고 해서<br> 선물로 줬는데 다음날 연락와서 같이 근무하는 직원들이 피부에 뭔 짓을 했냐며 난리를 쳤다고 하네요. -0107****님</p>
+  
+    <img src="./images/uv-wise-brightening-multi-protector_prd-detail_2_pc.jpg" alt="pp">
+    <div class="texture2">
+      <div class="howTo">
+      <h1 class="h1">사용단계 & 사용방법</h1>
+      <img src="./images/210512_snowisebrighteninguvprotector_use_1_640x618.gif" alt="gif1">
+    </div>
+      <div class="both">
+        <div class="left">
+      <img src="./images/210512_snowisebrighteninguvprotector_use_2_640x618.jpg" alt="texture1">
+      <strong>NO1. 크리미 글로우</strong>
+      <span>
+        -피부가 건조해지고 연약해졌다고 느낄 때<br>
+        -광채 피부 연출<br>
+        -촉촉한 텍스처<br>
+        -추운 겨울 크림처럼 촉촉한 선크림이 필요할 때
+      </span>
+    </div>
+    <div class="right">
+      <img src="./images/210512_snowisebrighteninguvprotector_use_3_640x618.jpg" alt="texture2">
+      <strong>NO2. 밀키 톤 업</strong>
+      <span>
+        -한층 화사한 피부 톤을 원할 때<br>
+        -톤 업 피부연출<br>
+        -끈적임 없이 산뜻한 텍스처<br>
+        -더운 여름철 가볍고 끈적이지 않는 선크림이 필요할 때
+      </span>
+    </div>
+    </div>
+    </div>
+  
+
+  <div class="review">
+    <h2>REVIEW</h2>
+    <div class="box">
+    <div class="text">
+      <a href="#"><strong>어르신들이 얼굴에 유분기가 없고 피부가 건조한데 이건 바르면 유분이 돌아서 얼굴당김도 없고 사용하기 편하다고 하십니다. 그리고 발림성이랑 얼굴에 혈색이 살짝 도는게 좋다고 하십니다</strong></a>
+      <span class="name">dltm*****</span>
+      <div class="like">
+      <span class="date">2022.07.17</span>
+      <div class="star">
+      <img src="./images/icon/Gold-Star.png" alt="star">
+      <img src="./images/icon/Gold-Star.png" alt="star">
+      <img src="./images/icon/Gold-Star.png" alt="star">
+      <img src="./images/icon/Gold-Star.png" alt="star">
+      <img src="./images/icon/Gold-Star.png" alt="star">
+    </div>
+    </div>
+    </div>
+    <div class="text">
+      <a href="#"><strong>피부톤 화사하고 발림성 부드러워 만족합니다.</strong></a>
+      <span class="name">0103******</span>
+      <div class="like">
+      <span class="date">2022.07.14</span>
+      <div class="star">
+        <img src="./images/icon/Gold-Star.png" alt="star">
+        <img src="./images/icon/Gold-Star.png" alt="star">
+        <img src="./images/icon/Gold-Star.png" alt="star">
+        <img src="./images/icon/Gold-Star.png" alt="star">
+      </div>
+      </div>
+      </div>
+      <div class="text">
+        <a href="#"><strong>써 본 썬크림 중에 가장 좋은 것 같습니다 화장이 잘 돼요 샘플 써보고 바로 구매했습니다 ^^</strong></a>
+        <span class="name">emma****</span>
+        <div class="like">
+        <span class="date">2022.07.13</span>    
+        <div class="star">
+          <img src="./images/icon/Gold-Star.png" alt="star">
+          <img src="./images/icon/Gold-Star.png" alt="star">
+          <img src="./images/icon/Gold-Star.png" alt="star">
+          <img src="./images/icon/Gold-Star.png" alt="star">
+          <img src="./images/icon/Gold-Star.png" alt="star">
+        </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="notice">
+    <div class="last">
+    <span>주의사항</span>
+    <p>1)화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것<br>
+      2.상처가 있는 부위 등에는 사용을 자제할 것<br>
+      3.보관 및 취급 시의 주의사항 <br>
+      가) 어린이의 손이 닿지 않는 곳에 보관할 것 <br>
+      나) 직사광선을 피해서 보관할 것
+      4.외용으로만 사용하고 눈에 들어가지 않도록 주의하십시오.<br>
+      5.제품을 피부에 도포하여 충분히 흡수시키지 않고 의류를 착용했을 경우 이염을 일으킬 수 있으므로 주의하여 주십시오.</p>
+      <div class="ingre">
+      <span>전성분</span>
+      <p>정제수, 프로판다이올, 에칠헥실메톡시신나메이트, 디에칠아미노하이드록시벤조일헥실벤조에이트, C12-15알킬벤조에이트, 글리세린, 비스-에칠헥실옥시페놀메톡시페닐트리아진, 메틸트라이메티콘, 티타늄디옥사이드, 아이소스테아릴네오펜타노에이트, 사이클로펜타실록세인, 1,2-헥산다이올, 실리카, C14-22알코올, 세틸알코올, 사이클로헥사실록세인, 글리세릴스테아레이트, 피이지-100스테아레이트, 폴리아크릴레이트-13, 부틸렌글라이콜, 알루미나, 알루미늄스테아레이트, C12-20알킬글루코사이드, 폴리메틸메타크릴레이트, 폴리아이소부텐, 스테아릭애씨드, 메톡시피이지-114/폴리엡실론카프로락톤, 폴리하이드록시스테아릭애씨드, 향료, 다이메티콘/비닐다이메티콘크로스폴리머, 리모넨, C12-15알코올, 글리세릴카프릴레이트, 티몰트라이메톡시신나메이트, 아크릴레이트/C10-30알킬아크릴레이트크로스폴리머, 다이소듐이디티에이, 에틸헥실글리세린, 폴리솔베이트20, 황금추출물, 솔비탄아이소스테아레이트, 리날룰, 뽕나무뿌리추출물, 매실추출물, 시트로넬올, 인삼추출물, 비에이치티, 시트랄, 제라니올, 글루코오스, 벤질벤조에이트, 토코페롤, 뽕나무열매추출물</p>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+<footer>
+  <div class="sns">
+    <ul class="sns">
+      <li>
+        <a href="#">
+          <img src="images/sns/sns_icon01.png" alt="카카오톡">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/sns/sns_icon2.png" alt="인스타">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/sns/sns_icon03.png" alt="유튜브">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer_wrap">
+    <div class="site_map">
+      <ul class="fixed">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">UGC이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">영상정보처리방침</a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">로그인</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <address>
+      <p>고객서비스센터(수신자요금부담) : <a href="tel:080-023-5454">080-023-5454</a>
+        (월~금: AM 09:00~PM 06:00) </p>
+      <p> &copy; AMOREPACIFIC CORPORATION. All rights reserved.</p>
+    </address>
+</footer>
